@@ -11,6 +11,7 @@ namespace twozerofoureight
         protected int boardSize; // default is 4
         protected int[,] board;
         protected Random rand;
+        
 
         public TwoZeroFourEightModel() : this(4)
         {
@@ -49,6 +50,7 @@ namespace twozerofoureight
                     break;
                 }
             }
+            
             return input;
         }
 
@@ -83,6 +85,7 @@ namespace twozerofoureight
                     {
                         buffer[j - 1] *= 2;
                         buffer[j] = 0;
+                        
                     }
                 }
                 // shift left again
@@ -135,6 +138,7 @@ namespace twozerofoureight
                     {
                         buffer[j - 1] *= 2;
                         buffer[j] = 0;
+                      
                     }
                 }
                 // shift left again
@@ -189,6 +193,7 @@ namespace twozerofoureight
                     {
                         buffer[j - 1] *= 2;
                         buffer[j] = 0;
+                      
                     }
                 }
                 // shift left again
@@ -240,6 +245,7 @@ namespace twozerofoureight
                     {
                         buffer[j - 1] *= 2;
                         buffer[j] = 0;
+                   
                     }
                 }
                 // shift left again
