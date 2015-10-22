@@ -8,7 +8,7 @@ namespace twozerofoureight
 {
     class TwoZeroFourEightModel : Model
     {
-        protected int boardSize; // default is 4
+        protected int boardSize; // default is 4f
         protected int[,] board;
         protected Random rand;
         protected int score = 0;

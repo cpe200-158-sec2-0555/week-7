@@ -25,7 +25,7 @@ namespace twozerofoureight
         public void UpdateScoreEnd(int score)
         {
 
-            lblScore.Text = "Game over " + "\nScore : " + score;
+            lblScore.Text = "Game over " + "\nScore :fk " + score;
         }
         private void TwoZeroFourEightScoreView_Load(object sender, EventArgs e)
         {

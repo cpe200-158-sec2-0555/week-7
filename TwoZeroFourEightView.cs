@@ -119,7 +119,7 @@ namespace twozerofoureight
 
         private void lblScore_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void TwoZeroFourEightView_Load(object sender, EventArgs e)

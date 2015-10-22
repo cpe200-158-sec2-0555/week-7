@@ -35,7 +35,7 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lblScore.Location = new System.Drawing.Point(51, 49);
+            this.lblScore.Location = new System.Drawing.Point(42, 49);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(0, 39);
             this.lblScore.TabIndex = 0;
