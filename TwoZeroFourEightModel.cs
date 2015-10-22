@@ -12,23 +12,53 @@ namespace twozerofoureight
         protected int[,] board;
         protected Random rand;
         protected int score = 0;
-        
-        public int Score
+        protected bool _isEnd = false;
+        public int GetScore()
         {
-            get
-            {
                 return score;
-            }
         }
 
         public TwoZeroFourEightModel() : this(4)
         {
-            // default board size is 4 
+            board = Random(board);
+            NotifyAll();
         }
 
         public int[,] GetBoard()
         {
             return board;
+        }
+
+        public bool IsEnd()
+        {
+            _isEnd = true;
+            for (int i = 0; i < boardSize - 1; i++)
+            {
+                for (int j = 0; j < boardSize - 1; j++)
+                {
+                    if (board[i,j] == 0)
+                    {
+                        _isEnd = false;
+                        break;
+                    }
+                    if (board[i,j] == board[i, j + 1])
+                    {
+                        _isEnd = false;
+                        break;
+                    }
+                    if (board[i,j] == board[i + 1, j])
+                    {
+                        _isEnd = false;
+                        break;
+                    }
+                    
+                }
+                if (!_isEnd)
+                {
+                    break;
+                }    
+            }
+            return _isEnd;
         }
 
         public TwoZeroFourEightModel(int size)
@@ -48,17 +78,18 @@ namespace twozerofoureight
 
         private int[,] Random(int[,] input)
         {
-            while (true)
+            for (int i = 0; i < boardSize * boardSize; i++)
             {
                 int x = rand.Next(boardSize);
                 int y = rand.Next(boardSize);
                 if (board[x, y] == 0)
                 {
                     board[x, y] = 2;
+                    score += 2;
                     break;
                 }
             }
-            score += 2;
+            
             return input;
         }
 
